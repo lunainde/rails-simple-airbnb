@@ -1,0 +1,33 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1459535653751-d571815e906b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80);">
+  <div class="container">
+    <h1>Made possible by <strong>Hosts</strong>!</h1>
+    <p>make the world your primary home.</p>
+    <a class="btn btn-flat" href="#">book now</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-trip mt-3">
+        <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3160&q=80" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= @flat.name %></h2>
+            <p><%= @flat.address %></p>
+            <p><%= @flat.description %></p>
+            <p>Guests <%= @flat.number_of_guests %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= @flat.price_per_night %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+        <div class="d-flex justify-content-around">
+          <%= link_to "see all", flats_path, class: 'text-success' %>
+          <%= link_to "edit", edit_flat_path(@flat), class: 'text-primary' %>
+          <%= link_to "delete", flat_path(@flat), method: :delete, data: { confirm: 'Please confirm'}, class: 'text-danger' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
